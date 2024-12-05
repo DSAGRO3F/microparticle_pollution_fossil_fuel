@@ -18,7 +18,7 @@ import os
 """process input data"""
 """load df's"""
 # path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
-path = 'microparticle_pollution_fossil_fuel/data/GBD2019'
+path = 'https://github.com/DSAGRO3F/microparticle_pollution_fossil_fuel/tree/main/data/GBD2019'
 
 def load_dfs(path):
     l_df = []

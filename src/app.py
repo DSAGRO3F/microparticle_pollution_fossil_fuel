@@ -17,7 +17,8 @@ import os
 
 """process input data"""
 """load df's"""
-path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
+# path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
+path = 'data/GBD2019'
 
 def load_dfs(path):
     l_df = []

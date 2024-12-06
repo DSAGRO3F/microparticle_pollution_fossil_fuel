@@ -19,6 +19,7 @@ from pathlib import Path
 
 """process input data"""
 """load df's"""
+<<<<<<< HEAD
 
 """path on local"""
 # path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
@@ -31,6 +32,10 @@ data_folder = 'data/GBD2019'
 abs_path_to_data = path_parent_folder.joinpath(data_folder)
 # print(f'abs_path_to_data: {abs_path_to_data}')
 
+=======
+# path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
+path = 'data/GBD2019'
+>>>>>>> 7c80d05f913b0077fee358bcc5e44fb7b5cc96e0
 
 def load_dfs(path):
     l_df = []

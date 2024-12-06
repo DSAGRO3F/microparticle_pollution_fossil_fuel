@@ -14,10 +14,23 @@ from dash.dependencies import Input, Output
 from dash import dash_table
 import dash_bootstrap_components as dbc
 import os
+import pathlib
+from pathlib import Path
 
 """process input data"""
 """load df's"""
-path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
+
+"""path on local"""
+# path = '/Users/olivierdebeyssac/Python_pollution_analysis/data/GBD2019'
+
+"""path to use for deployment"""
+path_parent_folder = pathlib.Path(__file__).resolve().parent.parent
+# print(f'path_parent_folder: {path_parent_folder}')
+
+data_folder = 'data/GBD2019'
+abs_path_to_data = path_parent_folder.joinpath(data_folder)
+# print(f'abs_path_to_data: {abs_path_to_data}')
+
 
 def load_dfs(path):
     l_df = []

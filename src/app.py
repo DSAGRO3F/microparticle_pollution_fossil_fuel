@@ -61,11 +61,11 @@ def load_dfs(path):
                 l_years.append(year)
                 l_words.append(word)
             
-                df = pd.read_csv(path+'/'+file)
+                df = pd.read_csv(str(path)+'/'+file)
                 l_df.append(df)
                 
             else:
-                df = pd.read_csv(path+'/'+file)
+                df = pd.read_csv(str(path)+'/'+file)
                 df_iso = df.loc[:, ['Location', 'ISO3']]
     
     return l_years, l_words, l_df, df_iso

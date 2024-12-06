@@ -29,7 +29,7 @@ path_parent_folder = pathlib.Path(__file__).resolve().parent.parent
 
 data_folder = 'data/GBD2019'
 path = path_parent_folder.joinpath(data_folder)
-# print(f'path: {path}')
+print(f'path_data: {path}')
 
 
 
@@ -61,11 +61,11 @@ def load_dfs(path):
                 l_years.append(year)
                 l_words.append(word)
             
-                df = pd.read_csv(path)
+                df = pd.read_csv(path+'/'+file)
                 l_df.append(df)
                 
             else:
-                df = pd.read_csv(path)
+                df = pd.read_csv(path+'/'+file)
                 df_iso = df.loc[:, ['Location', 'ISO3']]
     
     return l_years, l_words, l_df, df_iso

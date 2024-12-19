@@ -199,9 +199,9 @@ def fn_index_2017(l):
                     index = d[keys[2]]
                     l_.append(index)
 
-    print(f'index: {l_[0]}')
+    # print(f'index: {l_[0]}')
     store_id = f'''store-{l_[0]}'''
-    print(f'store_id for 2017: {store_id}')
+    # print(f'store_id for 2017: {store_id}')
                 
     return l_[0]
 
@@ -213,7 +213,7 @@ def fn_index_2017(l):
 def fn_index_2019(l):
     l_ = []
     for d in l:
-        print(f'd for index retrieve: {d}')
+        # print(f'd for index retrieve: {d}')
         keys = list(d.keys())
         for key in keys:
             if d[key] == word_input:
@@ -222,9 +222,9 @@ def fn_index_2019(l):
                     index = d[keys[2]]
                     l_.append(index)
 
-    print(f'index: {l_[0]}')
+    # print(f'index: {l_[0]}')
     store_id = f'''store-{l_[0]}'''
-    print(f'store_id for 2019: {store_id}')
+    # print(f'store_id for 2019: {store_id}')
 
                 
     return l_[0]
@@ -255,7 +255,7 @@ def fn_return_var_2017(l):
     year = l_2017[1]
 
                 
-    print(f'l_2017 ==> {l_2017[0]}, {l_2017[1]}')
+    # print(f'l_2017 ==> {l_2017[0]}, {l_2017[1]}')
     
     text = f'''# {word}, **{year}**'''
     return text
@@ -289,7 +289,7 @@ def fn_return_var_2019(l):
     year = l_2019[1]
 
                 
-    print(f'l_2019 ==> {l_2019[0]}, {l_2019[1]}')
+    # print(f'l_2019 ==> {l_2019[0]}, {l_2019[1]}')
     
     text = f'''# {word}, **{year}**'''
           
@@ -453,10 +453,10 @@ def percent(data_2017, data_2019):
     df_2017 = pd.DataFrame(data_2017)
     df_2019 = pd.DataFrame(data_2019)
     
-    print(f'lenghts dfs: {len(df_2017)}, {len(df_2019)}')
+    #vprint(f'lenghts dfs: {len(df_2017)}, {len(df_2019)}')
     
     dff_2017 = df_2017.loc[:,['Location', 'Total']]
-    print(f'dff_2017: {dff_2017.head()}')
+    # print(f'dff_2017: {dff_2017.head()}')
     
     dff_2019 = df_2019.loc[:,['Location', 'Total']]
     
@@ -476,7 +476,7 @@ def percent(data_2017, data_2019):
     df_merged['diff'] = df_merged['Tot_2019'] - df_merged['Tot_2017']
     df_merged['diff'] = df_merged['diff'].astype('int')
     df_cut = df_merged.loc[1:, :].sort_values(by=['Tot_2019'], ascending=False).reset_index(drop=True)
-    print(f'df_cut: {df_cut.head()}')
+    # print(f'df_cut: {df_cut.head()}')
     
     
     
@@ -641,7 +641,7 @@ def fn_select_list_id(value, data):
      Output('Barchart-all-countries-2019-copd', 'figure')],
     [Input('store-8', 'data'),
      Input('store-14', 'data'),
-      Input('select-country-copd', 'value')]
+     Input('select-country-copd', 'value')]
     )
 def select_country(data_2017, data_2019, value):
     #print(f'value from select_country fn: {value}')
@@ -682,7 +682,7 @@ def select_one_country(value, data):
     #print(f'data for selecting list of countries: {data}')
     #options_select_country = create_list_of_dict(list_of_dictionaries, n=12)
     list_of_options_output = data[value]
-    print(f'list_of_countries: {list_of_options_output}')
+    #print(f'list_of_countries: {list_of_options_output}')
     
     #print(f'value: {value}')
     #print(f'list_of_options_output in One Country: {list_of_options_output}')
@@ -705,7 +705,7 @@ def select_one_country(value, data):
      Output('Barchart-by-country-2019-copd', 'figure')],
     [Input('store-8', 'data'),
      Input('store-14', 'data'),
-      Input('select-one-country-input-copd', 'value')]
+     Input('select-one-country-input-copd', 'value')]
     )
 def return_figure_desease_by_country(data_2017, data_2019, value):
     

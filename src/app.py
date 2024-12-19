@@ -29,7 +29,7 @@ path_parent_folder = pathlib.Path(__file__).resolve().parent.parent
 
 data_folder = 'data/GBD2019'
 path = path_parent_folder.joinpath(data_folder)
-print(f'path_data: {path}')
+# print(f'path_data: {path}')
 
 
 
@@ -109,6 +109,7 @@ def add_iso_feature(l):
 new_list = add_iso_feature(l_df) # new_list contains df with added feature 'iso'
 
 # Prints
+#print(f'len(new_list): {len(new_list)}')
 #print(f'new_list[0].head() --- {new_list[0].iloc[0:5, 0:5]}')
 #print(f'new_list[1].head() --- {new_list[1].iloc[0:5, 0:5]}')
 
